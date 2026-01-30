@@ -18,7 +18,7 @@ export const submitKyc = createAsyncThunk(
         aadhaarDetails: kyc.aadhaarDetails,
       };
       const response = await axios.post(
-        "https://aryo-be-1.onrender.com/api/agent/submit-kyc",
+        "https://softwave-technify-be.onrender.com/api/agent/submit-kyc",
         payload,
         {
           headers: {

@@ -5,7 +5,7 @@ export const getAllProjects = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const res = await fetch(
-        "https://aryo-be-1.onrender.com/api/project/get-all"
+        "https://softwave-technify-be.onrender.com/api/project/get-all"
       );
 
       if (!res.ok) {
@@ -27,7 +27,7 @@ export const getProjectByType = createAsyncThunk(
       const encodedType = encodeURIComponent(projectType);
 
       const res = await fetch(
-        `https://aryo-be-1.onrender.com/api/project/type/${encodedType}`
+        `https://softwave-technify-be.onrender.com/api/project/type/${encodedType}`
       );
 
       if (!res.ok) {
