@@ -35,20 +35,20 @@ const PrivacyPolicy = () => {
           </h2>
 
           <p className="text-gray-700 text-sm md:text-base">
-            M/S REVENUE HUB PRIVATE LIMITED (Revenue Hub) <br />
+            M/S SoftWave Technify PRIVATE LIMITED (SoftWave Technify) <br />
             TERMS & CONDITIONS cum USER AGREEMENT
           </p>
 
           <h3 className="text-xl font-semibold mt-4">Introduction</h3>
           <p className="text-gray-700">
             Today, almost all organizations face challenges in handling Channel
-            Partner Firms and Freelancers. Revenue Hub is a mobile app-based
+            Partner Firms and Freelancers. SoftWave Technify is a mobile app-based
             platform that provides a one-stop solution for efficiently managing
             channel partner firms and freelancers nationwide.
           </p>
 
           <p className="text-gray-700">
-            Revenue Hub provides customer lead management, follow-up management,
+            SoftWave Technify provides customer lead management, follow-up management,
             agent offerings, commission-based work, agent earnings, dashboards,
             and reports for both B2C and B2B projects.
           </p>
@@ -72,7 +72,7 @@ const PrivacyPolicy = () => {
             <li>No illegal, abusive, or infringing content.</li>
             <li>Accounts violating policy may be removed.</li>
             <li>
-              You indemnify Revenue Hub from losses due to violations.
+              You indemnify SoftWave Technify from losses due to violations.
             </li>
           </ul>
 
@@ -94,7 +94,7 @@ const PrivacyPolicy = () => {
             Limitation of Liability
           </h3>
           <p className="text-gray-700">
-            Revenue Hub is a facilitator and is not liable for indirect or
+            SoftWave Technify is a facilitator and is not liable for indirect or
             consequential losses.
           </p>
 
@@ -102,7 +102,7 @@ const PrivacyPolicy = () => {
             Copyrights / Trademarks
           </h3>
           <p className="text-gray-700">
-            All content is the intellectual property of M/s REVENUE HUB PRIVATE
+            All content is the intellectual property of M/s SoftWave Technify PRIVATE
             LIMITED.
           </p>
 
@@ -131,11 +131,11 @@ const PrivacyPolicy = () => {
             Contact Information
           </h3>
           <p className="text-gray-700">
-            M/s REVENUE HUB PRIVATE LIMITED
+            M/s SoftWave Technify PRIVATE LIMITED
           </p>
 
           <p className="text-gray-500 mt-8 text-sm">
-            © {new Date().getFullYear()} Revenue Hub. All rights reserved.
+            © {new Date().getFullYear()} SoftWave Technify. All rights reserved.
           </p>
         </div>
       </div>

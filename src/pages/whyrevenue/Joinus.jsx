@@ -41,13 +41,13 @@ const Joinus = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
             Start Earning with{" "}
             <span className="relative inline-block">
-              <span className="relative z-10">RevenueHub</span>
+              <span className="relative z-10">SoftWave Technify</span>
               <span className="absolute left-0 bottom-2 w-full h-3 bg-sky-200 -z-0 rounded-md"></span>
             </span>
           </h2>
 
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
-            Join RevenueHub and launch your affiliate journey in just three
+            Join SoftWave and launch your affiliate journey in just three
             simple steps. No experience required.
           </p>
 

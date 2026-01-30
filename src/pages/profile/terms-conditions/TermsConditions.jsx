@@ -35,7 +35,7 @@ const TermsConditions = () => {
           </h2>
 
           <p className="text-gray-700 text-sm md:text-base">
-            M/S REVENUE HUB PRIVATE LIMITED (Revenue Hub) <br />
+            M/S SoftWave Technify PRIVATE LIMITED (SoftWave Technify) <br />
             TERMS & CONDITIONS cum USER AGREEMENT
           </p>
 
@@ -43,13 +43,13 @@ const TermsConditions = () => {
           <p className="text-gray-700">
             Today, almost all organizations face challenges in handling Channel
             Partner Firms and Freelancers, including scaling or quality issues.
-            Revenue Hub ("Revenue Hub," "our," "we," or "us") is a mobile
+            SoftWave Technify ("SoftWave Technify," "our," "we," or "us") is a mobile
             app-based platform that provides a one-stop solution for efficiently
             managing channel partner firms and freelancers nationwide.
           </p>
 
           <p className="text-gray-700">
-            Revenue Hub provides: Customer lead management, follow-up management,
+            SoftWave Technify provides: Customer lead management, follow-up management,
             agent offerings, commission-based work, agent earnings, and dashboards
             & reports. Our services are useful for B2C and B2B projects including
             Loans, Credit Cards, Savings Accounts, Insurance, Lead Generation,
@@ -75,7 +75,7 @@ const TermsConditions = () => {
             <li>No illegal, abusive, or infringing content.</li>
             <li>Violations may lead to account termination.</li>
             <li>
-              You indemnify Revenue Hub against losses caused by violations.
+              You indemnify SoftWave Technify against losses caused by violations.
             </li>
           </ul>
 
@@ -97,7 +97,7 @@ const TermsConditions = () => {
             Limitation of Liability
           </h3>
           <p className="text-gray-700">
-            Revenue Hub is a facilitator and is not liable for indirect or
+            SoftWave Technify is a facilitator and is not liable for indirect or
             consequential losses.
           </p>
 
@@ -105,7 +105,7 @@ const TermsConditions = () => {
             Copyrights / Trademarks
           </h3>
           <p className="text-gray-700">
-            All content is the intellectual property of M/s REVENUE HUB PRIVATE
+            All content is the intellectual property of M/s SoftWave Technify PRIVATE
             LIMITED.
           </p>
 
@@ -132,11 +132,11 @@ const TermsConditions = () => {
             Contact Information
           </h3>
           <p className="text-gray-700">
-            M/s REVENUE HUB PRIVATE LIMITED
+            M/s SoftWave Technify PRIVATE LIMITED
           </p>
 
           <p className="text-gray-500 mt-8 text-sm">
-            © {new Date().getFullYear()} Revenue Hub. All rights reserved.
+            © {new Date().getFullYear()} SoftWave Technify. All rights reserved.
           </p>
         </div>
       </div>

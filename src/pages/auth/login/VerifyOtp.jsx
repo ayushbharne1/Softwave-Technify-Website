@@ -1,4 +1,4 @@
-import img from "../../../assets/Privacypolicy-rafiki.svg";
+import img from "../../../assets/verifyotp.png";
 import { TbPasswordMobilePhone } from "react-icons/tb";
 import { useState, useRef, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";

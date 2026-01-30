@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import img from "../../../assets/Privacypolicy-rafiki.svg";
+import img from "../../../assets/Sign up.png";
 import { useNavigate } from "react-router-dom";
 import googleIcon from "../../../assets/google.png";
 import { useDispatch, useSelector } from "react-redux";
@@ -90,7 +90,7 @@ export default function Profiledetails() {
 
         <div className="bg-[#DFE9FB] rounded-2xl shadow-lg p-5 sm:p-6 md:p-8 w-full max-w-md mx-auto">
           <h2 className="text-lg sm:text-xl font-semibold text-center mb-1">
-            Welcome to <span className="text-blue-600">Revenue Hub</span>
+            Welcome to <span className="text-blue-600">SoftWave Technify</span>
           </h2>
           <p className="text-xs sm:text-sm text-gray-600 text-center mb-4 sm:mb-6">
             Please enter Your Credentials

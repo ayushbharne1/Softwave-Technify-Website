@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/newlogo.png";
+import logo from "../assets/footernextwave.jpeg";
 import {
   Send,
   Instagram,
@@ -20,16 +20,16 @@ const FooterBrand = () => (
       <img
         src={logo}
         alt="RevenueHub Logo"
-        className="w-40 h-8 object-contain rounded"
+        className="w-40 h-16 object-contain rounded"
       />
       {/* <span className="text-xl font-bold">RevenueHub</span> */}
     </div>
     <p className="text-sm text-gray-400 mb-4">
-      RevenueHub provides provisions as a Indian progressive to select top
+      SoftWave provides provisions as a Indian progressive to select top
       financial products to earn commissions.
     </p>
     <p className="text-xs text-gray-500">
-      © dhi's RevenueHub. All rights reserved.
+      © dhi's SoftWave. All rights reserved.
     </p>
   </div>
 );

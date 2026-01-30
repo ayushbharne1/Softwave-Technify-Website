@@ -2,9 +2,9 @@ import React from "react";
 
 const trainingVideos = [
   {
-    title: "ARYO Tutorial",
+    title: "Softwave Technify Tutorial",
     
-    description: "Learn the basics of Earning with ARYO."
+    description: "Learn the basics of Earning with Softwave Technify."
   },
   {
     title: "Advanced Training",
@@ -13,7 +13,7 @@ const trainingVideos = [
   },
   {
     title: "Earning Solutions",
-    description: "How to Earn by ARYO."
+    description: "How to Earn by Softwave Technify."
   }
 ];
 
