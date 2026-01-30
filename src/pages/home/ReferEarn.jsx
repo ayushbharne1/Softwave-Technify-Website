@@ -9,7 +9,7 @@ const ReferHeader = () => (
     </h2>
     <p className="text-center text-gray-700 mb-1">Refer your friends to</p>
     <p className="text-center text-gray-700 mb-4">
-      RevenueHub & earn 10% payouts for life
+      SoftWave Technify & earn 10% payouts for life
     </p>
   </>
 );

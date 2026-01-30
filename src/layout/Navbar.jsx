@@ -7,7 +7,15 @@ import Swal from "sweetalert2";
 import logo from "../assets/newlogo.png";
 
 /* Logo */
-const Logo = () => <img src={logo} alt="logo" className="w-28 md:w-40" />;
+const Logo = () => (
+  <div className="h-full flex items-center">
+    <img
+      src={logo}
+      alt="logo"
+      className="h-[130px] md:h-[143px] mt-2 w-auto object-contain"
+    />
+  </div>
+);
 
 /* Nav Links */
 const NavLinks = ({ onClick }) => {
@@ -26,26 +34,26 @@ const NavLinks = ({ onClick }) => {
     onClick?.();
   };
 
+  const labels = ["Home", "My Team", "Leads", "Trainings", "Help"];
+  const paths = ["/", "/team", "/lead", "/training", "/help"];
+
   return (
     <nav className="flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center">
-      {["/", "/team", "/lead", "/training", "/help"].map((path, i) => {
-        const labels = ["Home", "My Team", "Leads", "Trainings", "Help"];
-        return (
-          <Link
-            key={i}
-            to={path}
-            onClick={handleClick}
-            className={linkClasses(path)}
-          >
-            {labels[i]}
-            <span
-              className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 rounded-full transition-all duration-300 hidden md:block ${
-                isActive(path) ? "w-full opacity-100" : "w-0 opacity-0"
-              }`}
-            />
-          </Link>
-        );
-      })}
+      {paths.map((path, i) => (
+        <Link
+          key={i}
+          to={path}
+          onClick={handleClick}
+          className={linkClasses(path)}
+        >
+          {labels[i]}
+          <span
+            className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 rounded-full transition-all duration-300 hidden md:block ${
+              isActive(path) ? "w-full opacity-100" : "w-0 opacity-0"
+            }`}
+          />
+        </Link>
+      ))}
     </nav>
   );
 };
@@ -58,17 +66,15 @@ const UserSection = ({ open, setOpen, onLogout }) => {
   const userInitial = agent?.name?.charAt(0).toUpperCase();
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 h-full">
       {isLoggedIn && (
         <>
-          {/* Avatar */}
           <Link to="/profile">
             <div className="w-9 h-9 rounded-full ring-2 ring-purple-200 flex items-center justify-center bg-gradient-to-br from-purple-500 to-purple-600 text-white font-semibold">
               {userInitial}
             </div>
           </Link>
 
-          {/* Bell */}
           <div
             onClick={() => navigate("/notify")}
             className="relative cursor-pointer"
@@ -81,7 +87,6 @@ const UserSection = ({ open, setOpen, onLogout }) => {
         </>
       )}
 
-      {/* Desktop Button */}
       <div className="hidden md:block">
         {isLoggedIn ? (
           <button
@@ -100,7 +105,6 @@ const UserSection = ({ open, setOpen, onLogout }) => {
         )}
       </div>
 
-      {/* Mobile Toggle */}
       <button
         onClick={() => setOpen(!open)}
         className="md:hidden text-gray-700"
@@ -151,23 +155,22 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg shadow-sm px-6 py-4">
-      <div className="flex items-center justify-between">
+    <header className="h-23 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg shadow-sm px-6">
+      <div className="h-full flex items-center justify-between">
         <Logo />
 
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-10 h-full">
           <NavLinks />
           <UserSection open={open} setOpen={setOpen} onLogout={handleLogout} />
         </div>
 
-        <div className="md:hidden">
+        <div className="md:hidden h-full flex items-center">
           <UserSection open={open} setOpen={setOpen} onLogout={handleLogout} />
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden mt-5 bg-white rounded-xl shadow-lg p-5 border">
+        <div className="md:hidden mt-4 bg-white rounded-xl shadow-lg p-5 border">
           <NavLinks onClick={() => setOpen(false)} />
 
           {agent ? (

@@ -1,5 +1,5 @@
 import logo from "../../../assets/newlogo.png";
-import img from "../../../assets/Privacypolicy-rafiki.svg";
+import img from "../../../assets/Privacypolicy-rafiki.png";
 import india from "../../../assets/india.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -30,7 +30,7 @@ export default function Login() {
     if (sendOtp.fulfilled.match(res)) {
       const data = res.payload;
 
-      // DEV ONLY: show OTP on screen
+      // DEV ONLY: show OTP
       if (data?.otp) {
         alert(`OTP: ${data.otp}`);
       }
@@ -48,7 +48,6 @@ export default function Login() {
     }
   };
 
-  // 🔵 LOGIN PAGE
   return (
     <div className="min-h-screen bg-[#2E65B7] flex items-center justify-center px-4">
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -61,8 +60,13 @@ export default function Login() {
         {/* Right Card */}
         <div className="bg-[#DFE9FB] rounded-2xl shadow-lg p-6 md:p-8 max-w-md w-full mx-auto">
 
-          <div className="flex justify-center mb-6">
-            <img src={logo} alt="Logo" />
+          {/* 🔵 LOGO (UI Improved) */}
+          <div className="flex justify-center items-center h-[140px] mb-4">
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-[280px] w-auto object-contain"
+            />
           </div>
 
           <p className="text-center text-gray-700 font-medium mb-6">

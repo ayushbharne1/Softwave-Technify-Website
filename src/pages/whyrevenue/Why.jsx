@@ -5,7 +5,7 @@ import { FaWordpress } from "react-icons/fa";
 const features = [
   {
     icon: <Link2 className="w-10 h-10 sm:w-12 sm:h-12 text-red-300" />,
-    title: "Revenue Hub",
+    title: "SoftWave",
     description:
       "Centralized platform to manage and track all your monetization efforts efficiently.",
     moreInfo:
@@ -18,7 +18,7 @@ const features = [
   },
   {
     icon: <Smartphone className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-300" />,
-    title: "HubApps",
+    title: "SoftApps",
     description: "Mobile apps to monetize your content on the go.",
     moreInfo:
       "CueApps provides mobile applications for iOS and Android to manage your content monetization on the move.",
@@ -74,7 +74,7 @@ const WhyRevenueHub = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
           Why Choose{" "}
           <span className="relative inline-block">
-            <span className="relative z-10">Revenue Hub</span>
+            <span className="relative z-10">SoftWave Technify</span>
             <span className="absolute left-0 bottom-1 w-full h-3 bg-sky-300/70 rounded-md -z-0"></span>
           </span>
           ?
