@@ -7,8 +7,6 @@ import { initProfile } from "./redux/thunks/profileThunks";
 
 const App = () => {
   const dispatch = useDispatch();
-
-  // 🔥 App load hote hi profile initialize
   useEffect(() => {
     dispatch(initProfile());
   }, [dispatch]);
