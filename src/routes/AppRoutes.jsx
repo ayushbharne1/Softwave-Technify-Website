@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
-import ProjectsLayout from "../layout/ProjectsLayout";
+
 import ProtectedRoute from "./ProtectedRoute";
 
 import Home from "../pages/home/Home";
@@ -10,7 +10,7 @@ import Lead from "../pages/lead/Lead";
 import Training from "../pages/training/Training";
 import Help from "../pages/help/help";
 import Notifications from "../pages/notifications/Notifications";
-import ProjectDetail from "../pages/home/project/ProjectDetail";
+
 import Login from "../pages/auth/login/login";
 import VerifyOtp from "../pages/auth/login/VerifyOtp";
 import Profiledetails from "../pages/auth/signup/Profiledetails";
@@ -30,7 +30,9 @@ import PrivacyPolicy from "../pages/profile/privacypolicy/PrivacyPolicy";
 import DeleteAccount from "../pages/profile/deleteaccount/DeleteAccount";
 import PendingEarnings from "../pages/earnings/PendingEarnings";
 import MyEarnings from "../pages/earnings/MyEarnings";
-import projectsRoutes from "./projectsRoutes";
+import DetailsProject from "../pages/projects/allprojects/Detailsproject";
+import AllServices from "../pages/projects/allprojects/AllProjects";
+import DetailsForm from "../pages/projects/allprojects/DetailsForm";
 
 const AppRoutes = () => {
   return (
@@ -38,7 +40,6 @@ const AppRoutes = () => {
       {/* ===== PUBLIC ROUTES ===== */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/project/:id" element={<ProjectDetail />} />
       </Route>
 
       <Route path="/login" element={<Login />} />
@@ -55,11 +56,10 @@ const AppRoutes = () => {
           <Route path="/help" element={<Help />} />
           <Route path="/notify" element={<Notifications />} />
 
-          <Route path="/projects" element={<ProjectsLayout />}>
-            {projectsRoutes}
-          </Route>
-
-          
+          {/* ===== PROJECT ROUTES ===== */}
+          <Route path="/allproject" element={<AllServices />} />
+          <Route path="/detailsproject" element={<DetailsProject />} />
+          <Route path="/detailsform" element={<DetailsForm />} />
 
           <Route path="/profile" element={<Profile />}>
             <Route path="personalinfo" element={<PersonalInfo />} />

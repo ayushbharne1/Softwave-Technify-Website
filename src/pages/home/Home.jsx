@@ -3,16 +3,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import OffersCarousel from "./Offers";
 import BalanceCards from "./BalanceCards";
-import { PopularProjects, AllProjects } from "./project/Projects";
+import Popular from "../projects/popularprojects/Popular";
 import Sidebar from "./Sidebar";
 import WhyRevenueHub from "../whyrevenue/Why";
 import Joinus from "../whyrevenue/Joinus";
 import Testimonials from "./Testimonials";
-import { useDispatch } from "react-redux"; 
-import { getAllProjects } from "../../redux/thunks/projectThunks";
-
+import AllServices from "../projects/allprojects/AllProjects";
 const Home = () => {
-  const dispatch = useDispatch();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -21,11 +18,7 @@ const Home = () => {
       offset: 50,
       mirror: false,
     });
-    dispatch(getAllProjects());
-
-  }, [dispatch]);
-
-
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-x-hidden">
@@ -69,16 +62,15 @@ const Home = () => {
           data-aos-delay="250"
           className="mt-8 transform transition-all"
         >
-          <PopularProjects />
+          <Popular />
         </div>
 
-        {/* ALL PROJECTS */}
         <div
           data-aos="fade-up"
           data-aos-delay="450"
           className="mt-12 transform transition-all "
         >
-          <AllProjects />
+          <AllServices/>
         </div>
 
         <div
