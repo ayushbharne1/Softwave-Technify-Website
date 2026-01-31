@@ -30,7 +30,7 @@ import PrivacyPolicy from "../pages/profile/privacypolicy/PrivacyPolicy";
 import DeleteAccount from "../pages/profile/deleteaccount/DeleteAccount";
 import PendingEarnings from "../pages/earnings/PendingEarnings";
 import MyEarnings from "../pages/earnings/MyEarnings";
-import DetailsProject from "../pages/projects/allprojects/Detailsproject";
+import DetailsProject from "../pages/projects/allprojects/DetailProject";
 import AllServices from "../pages/projects/allprojects/AllProjects";
 import DetailsForm from "../pages/projects/allprojects/DetailsForm";
 
