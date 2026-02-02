@@ -3,6 +3,7 @@ import { FiSearch } from "react-icons/fi";
 import { HiUsers, HiCheckCircle } from "react-icons/hi";
 import { MdPendingActions } from "react-icons/md";
 import { FaWallet } from "react-icons/fa";
+import { FiPlus } from "react-icons/fi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,10 +17,25 @@ export default function Leads() {
     });
   }, []);
 
+  const handleCreateLead = () => {
+    // Add your create lead logic here
+    console.log("Create Lead clicked");
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       {/* PAGE CONTAINER */}
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+        {/* CREATE LEAD BUTTON - TOP RIGHT */}
+        <div className="flex justify-end mb-6" data-aos="fade-left">
+          <button
+            onClick={handleCreateLead}
+            className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <FiPlus size={20} />
+            <span>Create Lead</span>
+          </button>
+        </div>
 
         {/* STATS CARDS */}
         <div className="grid grid-cols-2 md:grid-cols-2 gap-4 sm:gap-6 mb-8">
@@ -65,7 +81,7 @@ export default function Leads() {
         </div>
 
         {/* SEARCH BAR */}
-        <div 
+        <div
           className="bg-white rounded-2xl border border-gray-200 shadow-sm px-4 sm:px-5 py-4"
           data-aos="fade-up"
           data-aos-delay="300"
@@ -79,7 +95,6 @@ export default function Leads() {
             />
           </div>
         </div>
-
       </div>
     </div>
   );
@@ -99,9 +114,7 @@ function StatCard({ title, value, bg, iconBg, icon }) {
         </p>
       </div>
 
-      <div className={`${iconBg} rounded-full p-3`}>
-        {icon}
-      </div>
+      <div className={`${iconBg} rounded-full p-3`}>{icon}</div>
     </div>
   );
 }

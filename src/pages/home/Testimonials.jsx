@@ -7,7 +7,7 @@ const testimonials = [
       "Amazing experience! The platform is smooth, intuitive and helped me grow my business effortlessly.",
   },
   {
-    name: "Sunil Rathod",
+    name: "Steve jobs",
     role: "Full Stack Developer",
     image: "https://avatars.githubusercontent.com/u/102689516?v=4",
     review:

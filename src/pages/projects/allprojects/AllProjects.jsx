@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   Monitor,
   Smartphone,
@@ -12,6 +12,8 @@ import {
   Code2,
   Lightbulb,
   Zap,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import web from "../../../assets/web.png";
@@ -201,7 +203,35 @@ const services = [
 const AllServices = () => {
   const [active, setActive] = useState(services[0]);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const carouselRef = useRef(null);
   const navigate = useNavigate();
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel || isPaused) return;
+
+    const scrollSpeed = 1; // pixels per frame
+    let animationFrameId;
+
+    const autoScroll = () => {
+      if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+        carousel.scrollLeft = 0;
+      } else {
+        carousel.scrollLeft += scrollSpeed;
+      }
+      animationFrameId = requestAnimationFrame(autoScroll);
+    };
+
+    animationFrameId = requestAnimationFrame(autoScroll);
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, [isPaused]);
 
   const handleServiceChange = (service) => {
     if (service.id !== active.id) {
@@ -215,6 +245,24 @@ const AllServices = () => {
 
   const handleViewDetails = () => {
     navigate("/detailsproject");
+  };
+
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: -300,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: 300,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -234,41 +282,104 @@ const AllServices = () => {
           </p>
         </div>
 
-        {/* Tabs Container */}
-        <div className="bg-white rounded-2xl p-4 md:p-6 mb-10 border border-gray-100">
-          <div className="flex justify-start md:justify-center gap-3 md:gap-6 overflow-x-auto pb-2 scrollbar-hide">
-            {services.map((service) => (
+        {/* Combined Tabs Container + Content Card */}
+        <div className="bg-white rounded-3xl overflow-hidden border border-gray-100">
+          {/* Tabs Container - Live Carousel with Manual Controls */}
+          <div className="bg-white rounded-t-3xl p-4 md:p-6 border-b border-gray-100">
+            <div className="relative">
+              {/* Left Navigation Button */}
               <button
-                key={service.id}
-                onClick={() => handleServiceChange(service)}
-                className={`flex flex-col items-center gap-3 min-w-[110px] md:min-w-[130px] p-3 rounded-xl transition-all duration-300 ${
-                  active.id === service.id
-                    ? "text-indigo-600 scale-105"
-                    : "text-gray-500 hover:text-indigo-500 hover:scale-102"
-                }`}
+                onClick={scrollLeft}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-indigo-50 p-2 rounded-full shadow-lg border border-gray-200 transition-all duration-300 hover:scale-110"
+                aria-label="Scroll Left"
               >
-                <div
-                  className={`p-3 md:p-4 rounded-xl transition-all duration-300 ${
-                    active.id === service.id
-                      ? "bg-gradient-to-br from-indigo-500 to-indigo-600 text-white shadow-lg shadow-indigo-200"
-                      : "bg-gray-50 hover:bg-indigo-50"
-                  }`}
-                >
-                  {service.icon}
-                </div>
-                <span className="text-xs md:text-sm font-semibold text-center leading-tight px-2">
-                  {service.label}
-                </span>
-                {active.id === service.id && (
-                  <div className="w-full h-1 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full shadow-sm"></div>
-                )}
+                <ChevronLeft className="w-5 h-5 text-indigo-600" />
               </button>
-            ))}
-          </div>
-        </div>
 
-        {/* Content Card */}
-        <div className="bg-white rounded-3xl  overflow-hidden border border-gray-100">
+              {/* Right Navigation Button */}
+              <button
+                onClick={scrollRight}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-indigo-50 p-2 rounded-full shadow-lg border border-gray-200 transition-all duration-300 hover:scale-110"
+                aria-label="Scroll Right"
+              >
+                <ChevronRight className="w-5 h-5 text-indigo-600" />
+              </button>
+
+              {/* Scrollable Container */}
+              <div className="overflow-hidden mx-10">
+                <div
+                  ref={carouselRef}
+                  className="flex gap-3 md:gap-6 pb-2 overflow-x-auto scrollbar-hide"
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => setIsPaused(false)}
+                >
+                  {/* First Set */}
+                  {services.map((service) => (
+                    <button
+                      key={service.id}
+                      onClick={() => handleServiceChange(service)}
+                      className={`flex flex-col items-center gap-3 min-w-[110px] md:min-w-[130px] p-3 rounded-xl transition-all duration-300 flex-shrink-0 ${
+                        active.id === service.id
+                          ? "text-indigo-600 scale-105"
+                          : "text-gray-500 hover:text-indigo-500 hover:scale-102"
+                      }`}
+                    >
+                      <div
+                        className={`p-3 md:p-4 rounded-xl transition-all duration-300 ${
+                          active.id === service.id
+                            ? "bg-gradient-to-br from-indigo-500 to-indigo-600 text-white shadow-lg shadow-indigo-200"
+                            : "bg-gray-50 hover:bg-indigo-50"
+                        }`}
+                      >
+                        {service.icon}
+                      </div>
+                      <span className="text-xs md:text-sm font-semibold text-center leading-tight px-2">
+                        {service.label}
+                      </span>
+                      {active.id === service.id && (
+                        <div className="w-full h-1 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full shadow-sm"></div>
+                      )}
+                    </button>
+                  ))}
+
+                  {/* Duplicate Set for Seamless Loop */}
+                  {services.map((service) => (
+                    <button
+                      key={`${service.id}-duplicate`}
+                      onClick={() => handleServiceChange(service)}
+                      className={`flex flex-col items-center gap-3 min-w-[110px] md:min-w-[130px] p-3 rounded-xl transition-all duration-300 flex-shrink-0 ${
+                        active.id === service.id
+                          ? "text-indigo-600 scale-105"
+                          : "text-gray-500 hover:text-indigo-500 hover:scale-102"
+                      }`}
+                    >
+                      <div
+                        className={`p-3 md:p-4 rounded-xl transition-all duration-300 ${
+                          active.id === service.id
+                            ? "bg-gradient-to-br from-indigo-500 to-indigo-600 text-white shadow-lg shadow-indigo-200"
+                            : "bg-gray-50 hover:bg-indigo-50"
+                        }`}
+                      >
+                        {service.icon}
+                      </div>
+                      <span className="text-xs md:text-sm font-semibold text-center leading-tight px-2">
+                        {service.label}
+                      </span>
+                      {active.id === service.id && (
+                        <div className="w-full h-1 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full shadow-sm"></div>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Content Card - Attached Below Tabs */}
           <div
             className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 p-8 md:p-12 transition-opacity duration-300 ${
               isTransitioning ? "opacity-0" : "opacity-100"
@@ -394,15 +505,19 @@ const AllServices = () => {
             transform: translate(-20px, 20px) scale(0.9);
           }
         }
+
         .animate-blob {
           animation: blob 7s infinite;
         }
+
         .animation-delay-2000 {
           animation-delay: 2s;
         }
+
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
+
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;

@@ -62,7 +62,7 @@ const WhyRevenueHub = () => {
   const [selectedFeature, setSelectedFeature] = useState(null);
 
   return (
-    <section className="py-20 sm:py-24 relative overflow-hidden">
+    <section className="py-10 sm:py-16 relative overflow-hidden">
       <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full blur-3xl opacity-30" />
       <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full blur-3xl opacity-30" />
 
@@ -90,7 +90,7 @@ const WhyRevenueHub = () => {
         </div>
 
         {/* ✅ MOBILE PROFESSIONAL GRID */}
-        <div className="mt-14 sm:mt-20 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-10">
+        <div className="mt-10 sm:mt-12 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-10">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -118,7 +118,7 @@ const WhyRevenueHub = () => {
       {selectedFeature && (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
           <div
-            className="absolute inset-0  backdrop-blur-sm"
+            className="absolute inset-0 backdrop-blur-sm"
             onClick={() => setSelectedFeature(null)}
           />
 
