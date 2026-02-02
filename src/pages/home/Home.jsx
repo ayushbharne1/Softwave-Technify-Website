@@ -68,15 +68,15 @@ const Home = () => {
         <div
           data-aos="fade-up"
           data-aos-delay="450"
-          className="mt-12 transform transition-all "
+          className=" transform transition-all "
         >
-          <AllServices/>
+          <AllServices />
         </div>
 
         <div
           data-aos="fade-right"
           data-aos-delay="450"
-          className="mt-12 transform transition-all"
+          className=" transform transition-all"
         >
           <WhyRevenueHub />
         </div>
@@ -84,14 +84,14 @@ const Home = () => {
         <div
           data-aos="fade-left"
           data-aos-delay="450"
-          className="mt-12 transform transition-all"
+          className=" mt-2 transform transition-all"
         >
           <Joinus />
         </div>
         <div
           data-aos="fade-right"
           data-aos-delay="450"
-          className="mt-12 transform transition-all"
+          className=" transform transition-all"
         >
           <Testimonials />
         </div>

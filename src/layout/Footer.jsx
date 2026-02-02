@@ -95,10 +95,10 @@ const Footer = () => (
       <FooterColumn
         title="Popular Projects"
         items={[
-          { label: "Credit Card", path: "/projects/credit-card" },
-          { label: "Demat Account", path: "/projects/demat-account" },
-          { label: "Savings Account", path: "/projects/savings-account" },
-          { label: "Instant Loan", path: "/projects/instant-loan" },
+          { label: "Website Development" },
+          { label: "Mobile App Development" },
+          { label: "E-commerce Development" },
+          { label: "ERP Development" },
         ]}
       />
 
@@ -115,14 +115,8 @@ const Footer = () => (
     </div>
 
     <div className="text-xs text-gray-500 text-center pt-4 border-t border-gray-700">
-      <p>
-        Your header replaces anywhere more as they hesitant model no near
-        insurance charges
-      </p>
-      <p>your choice nghbrs Add incidents</p>
-      <p className="mt-2">
-        legal manuals be copied+https drug +520 broad count
-      </p>
+      <p>SoftWave Technify - Registered through TalentRise Technokrate</p>
+      <p className="mt-2">© 2025 SoftWave Technify. All Rights Reserved.</p>
     </div>
   </footer>
 );

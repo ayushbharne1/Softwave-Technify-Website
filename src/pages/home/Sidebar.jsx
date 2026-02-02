@@ -3,7 +3,7 @@ import QuickAccessIcons from './QuickAccessIcons';
 import ReferEarn from './ReferEarn';
 
 const Sidebar = () => (
-  <div className="space-y-4 w-full">
+  <div className=" w-full">
     {/* Quick Access Icons */}
     <QuickAccessIcons />
 

@@ -7,26 +7,6 @@ const BalanceCards = () => {
 
   return (
     <div className="space-y-6 mt-6">
-
-      <div
-        onClick={() => navigate("/profile/pancarddetails")}
-        className="flex items-center justify-between bg-blue-50 px-6 py-5 rounded-2xl cursor-pointer hover:bg-blue-100 transition"
-      >
-        <div className="flex items-center gap-4">
-          <div className="bg-white p-3 rounded-xl shadow-sm">
-            <ShieldCheck className="text-blue-600 w-6 h-6" />
-          </div>
-          <div>
-            <p className="font-semibold text-gray-900">
-              Verify your PAN
-            </p>
-            <p className="text-sm text-gray-500 mt-0.5">
-              To start receiving payouts
-            </p>
-          </div>
-        </div>
-        <span className="text-gray-400 text-2xl">›</span>
-      </div>
       <div className="grid grid-cols-2 gap-6">
         <div
           onClick={() => navigate("/pending-earnings")}
@@ -53,7 +33,6 @@ const BalanceCards = () => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

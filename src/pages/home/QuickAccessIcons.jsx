@@ -3,7 +3,7 @@ import { MessageSquare, Send, DollarSign } from "lucide-react";
 
 const QuickAccessIcon = ({ icon: Icon, label, bgColor }) => (
   <div className="flex flex-col items-center gap-2">
-    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+    <div className="w-16 h-16 rounded-full bg-white flex items-center  justify-center">
       <div
         className={`w-14 h-14 ${bgColor} rounded-full flex items-center justify-center shadow-md`}
       >
@@ -15,7 +15,7 @@ const QuickAccessIcon = ({ icon: Icon, label, bgColor }) => (
 );
 
 const QuickAccessIcons = () => (
-  <div className="flex gap-6 justify-center bg-gradient-to-br from-blue-100 to-purple-100 py-6 rounded-lg">
+  <div className="flex gap-6 justify-center mb-3 bg-gradient-to-br from-blue-100 to-purple-100 py-6 rounded-lg">
     <QuickAccessIcon
       icon={MessageSquare}
       label="Community"
