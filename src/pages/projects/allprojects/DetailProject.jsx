@@ -385,7 +385,7 @@ const DetailsProject = () => {
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs text-gray-600 mb-1">You Earn</p>
+                      <p className="text-xs text-gray-600 mb-1">Price</p>
                       <span className="text-xl font-bold text-indigo-600">
                         {project.earnings}
                       </span>
@@ -408,8 +408,8 @@ const DetailsProject = () => {
                   onClick={() => handleShare(project)}
                   className="mt-4 w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-xl transition-all"
                 >
-                  <Share2 className="w-4 h-4" />
-                  <span className="font-semibold">Share</span>
+                  
+                  <span className="font-semibold">Submit</span>
                 </button>
               </div>
             </div>

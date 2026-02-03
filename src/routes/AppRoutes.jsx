@@ -7,7 +7,7 @@ import Home from "../pages/home/Home";
 import MyTeam from "../pages/myteam/MyTeam";
 import Kyc from "../pages/myteam/Kyc";
 import Lead from "../pages/lead/Lead";
-import Training from "../pages/training/Training";
+import Contact from "../pages/contact/Contact";
 import Help from "../pages/help/help";
 import Notifications from "../pages/notifications/Notifications";
 
@@ -52,7 +52,7 @@ const AppRoutes = () => {
           <Route path="/team" element={<MyTeam />} />
           <Route path="/kycpan" element={<Kyc />} />
           <Route path="/lead" element={<Lead />} />
-          <Route path="/training" element={<Training />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/help" element={<Help />} />
           <Route path="/notify" element={<Notifications />} />
 
