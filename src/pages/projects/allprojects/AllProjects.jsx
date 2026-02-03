@@ -32,7 +32,6 @@ const services = [
     id: "website",
     label: "Website Development",
     heading: "Professional Website Development",
-    tag: "Premium IT Services",
     subtitle: "Build fast, modern & scalable websites",
     description:
       "We create responsive, SEO-friendly, and high-performance websites tailored to your business needs. Our expert team delivers cutting-edge solutions that drive results.",
@@ -49,7 +48,6 @@ const services = [
     id: "mobile",
     label: "Mobile App Development",
     heading: "Mobile App Development",
-    tag: "Premium IT Services",
     subtitle: "Powerful mobile apps for Android & iOS",
     description:
       "From idea to launch, we develop secure and scalable mobile applications with exceptional UI/UX. Transform your business with innovative mobile solutions.",
@@ -66,7 +64,6 @@ const services = [
     id: "ecommerce",
     label: "E-commerce Development",
     heading: "E-commerce Solutions",
-    tag: "Premium IT Services",
     subtitle: "Sell smarter with powerful online stores",
     description:
       "We build conversion-focused e-commerce platforms with secure payment gateways, intuitive admin panels, and advanced analytics to boost your online sales.",
@@ -83,7 +80,7 @@ const services = [
     id: "digital-marketing",
     label: "Digital Marketing",
     heading: "Digital Marketing Services",
-    tag: "Growth & Marketing",
+
     subtitle: "Grow your brand with data-driven strategies",
     description:
       "Comprehensive digital marketing solutions including SEO, social media marketing, PPC campaigns, and content marketing to maximize your online presence and ROI.",
@@ -100,7 +97,7 @@ const services = [
     id: "custom-software",
     label: "Custom Software Development",
     heading: "Custom Software Solutions",
-    tag: "Enterprise Solutions",
+
     subtitle: "Tailored software for unique business needs",
     description:
       "Build custom software solutions perfectly aligned with your business processes. From concept to deployment, we create scalable applications that solve your specific challenges.",
@@ -117,7 +114,7 @@ const services = [
     id: "product-development",
     label: "Product Development",
     heading: "Product Development & Innovation",
-    tag: "Innovation Lab",
+
     subtitle: "Turn your ideas into market-ready products",
     description:
       "End-to-end product development from ideation to launch. We help startups and enterprises build innovative digital products with cutting-edge technology and design.",
@@ -134,7 +131,7 @@ const services = [
     id: "digital-transformation",
     label: "Digital Transformation",
     heading: "Digital Transformation Services",
-    tag: "Enterprise Modernization",
+
     subtitle: "Modernize your business for the digital age",
     description:
       "Transform your legacy systems and processes with modern technology. We help organizations embrace digital innovation to improve efficiency and stay competitive.",
@@ -151,7 +148,7 @@ const services = [
     id: "erp",
     label: "ERP Development",
     heading: "Enterprise ERP Solutions",
-    tag: "Enterprise Solutions",
+
     subtitle: "Manage business operations efficiently",
     description:
       "Custom ERP solutions to streamline finance, HR, inventory, and operations in one unified system. Enhance productivity and drive business growth.",
@@ -168,7 +165,7 @@ const services = [
     id: "cms",
     label: "CMS Development",
     heading: "Content Management Systems",
-    tag: "Content Management",
+
     subtitle: "Control your content with ease",
     description:
       "User-friendly CMS solutions that empower you to update and manage content effortlessly without technical knowledge. Full control at your fingertips.",
@@ -185,7 +182,7 @@ const services = [
     id: "crm",
     label: "CRM Development",
     heading: "Customer Relationship Management",
-    tag: "Customer Management",
+
     subtitle: "Build better customer relationships",
     description:
       "Custom CRM systems designed to track leads, manage customer interactions, and boost sales productivity. Transform your customer relationships.",
@@ -389,10 +386,6 @@ const AllServices = () => {
             <div className="flex flex-col justify-center">
               <div className="space-y-6">
                 <div>
-                  <span className="inline-block bg-gradient-to-r from-indigo-100 to-blue-100 text-indigo-700 text-xs md:text-sm font-bold px-5 py-2 rounded-full mb-6 border border-indigo-200">
-                    {active.tag}
-                  </span>
-
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                     {active.heading}
                   </h2>
@@ -446,44 +439,6 @@ const AllServices = () => {
                     alt={active.heading}
                     className="relative w-full h-auto object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
                   />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Stats Bar */}
-          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 border-t border-gray-100 px-8 py-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div>
-                <div className="text-2xl md:text-3xl font-bold text-indigo-600">
-                  500+
-                </div>
-                <div className="text-sm text-gray-600 font-medium">
-                  Projects Delivered
-                </div>
-              </div>
-              <div>
-                <div className="text-2xl md:text-3xl font-bold text-indigo-600">
-                  98%
-                </div>
-                <div className="text-sm text-gray-600 font-medium">
-                  Client Satisfaction
-                </div>
-              </div>
-              <div>
-                <div className="text-2xl md:text-3xl font-bold text-indigo-600">
-                  50+
-                </div>
-                <div className="text-sm text-gray-600 font-medium">
-                  Expert Developers
-                </div>
-              </div>
-              <div>
-                <div className="text-2xl md:text-3xl font-bold text-indigo-600">
-                  24/7
-                </div>
-                <div className="text-sm text-gray-600 font-medium">
-                  Support Available
                 </div>
               </div>
             </div>

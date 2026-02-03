@@ -81,7 +81,7 @@ const DetailsForm = () => {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Address</p>
-                    <p className="text-indigo-100 text-sm">Mumbai, India</p>
+                    <p className="text-indigo-100 text-sm">Nagpur, India</p>
                   </div>
                 </div>
 
@@ -102,17 +102,6 @@ const DetailsForm = () => {
                   <div>
                     <p className="font-semibold mb-1">Email</p>
                     <p className="text-indigo-100 text-sm">support@company.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <div className="bg-white/20 p-3 rounded-lg">
-                    <Clock className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="font-semibold mb-1">Working Hours</p>
-                    <p className="text-indigo-100 text-sm">Mon - Fri: 10AM - 7PM</p>
-                    <p className="text-indigo-100 text-sm">Sat: 10AM - 4PM</p>
                   </div>
                 </div>
               </div>
